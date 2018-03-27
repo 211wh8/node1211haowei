@@ -36,6 +36,7 @@ function letTest() {
     console.log(x);  // 1
 }
 /*const
+声明一个只读常量，
 同一块命名时不能有重名
 新的块可以用let定义
 常量要求一个初始值

@@ -11,6 +11,6 @@ var c = [];
 c[0] = function () {
    console.log(0);
 };
-console.log(c());
+// console.log(c());
 console.log(a);
 // console.log(b);
