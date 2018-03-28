@@ -1,0 +1,69 @@
+同步的数据我要写的数据<syle>
+body{
+    background-color: aqua;
+}
+form{
+    width: 200px;
+    background-color: deeppink;
+}
+form input{
+    margin-top: 5px;
+}
+form #g{
+    margin: 10px 50px;
+    width: 100px;
+    height: 50px;
+    background-color: deepskyblue;
+}
+</syle><syle>
+body{
+    background-color: aqua;
+}
+form{
+    width: 200px;
+    background-color: deeppink;
+}
+form input{
+    margin-top: 5px;
+}
+form #g{
+    margin: 10px 50px;
+    width: 100px;
+    height: 50px;
+    background-color: deepskyblue;
+}
+</syle><syle>
+body{
+    background-color: aqua;
+}
+form{
+    width: 200px;
+    background-color: deeppink;
+}
+form input{
+    margin-top: 5px;
+}
+form #g{
+    margin: 10px 50px;
+    width: 100px;
+    height: 50px;
+    background-color: deepskyblue;
+}
+</syle><syle>undefined</syle><syle>
+body{
+    background-color: aqua;
+}
+form{
+    width: 200px;
+    background-color: deeppink;
+}
+form input{
+    margin-top: 5px;
+}
+form #g{
+    margin: 10px 50px;
+    width: 100px;
+    height: 50px;
+    background-color: deepskyblue;
+}
+</syle>同步的数据我要写的数据

@@ -1,0 +1,17 @@
+
+body{
+    background-color: aqua;
+}
+form{
+    width: 250px;
+    background-color: deeppink;
+}
+form input{
+    margin-top: 5px;
+}
+ #g{
+    margin: 10px 50px;
+    width: 100px;
+    height: 50px;
+    background-color: deepskyblue;
+}

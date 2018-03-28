@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="my">
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+</div>
+<script>
+    var oMy = document.getElementById("my");
+    //显示某个节点的内容
+    //console.dirxml()用来显示网页的某个节点（node）所包含的html/xml代码。
+    console.log(oMy);
+    console.dirxml(oMy);
+    //判断变量是否是真
+    //console.assert()用来判断一个表达式或变量是否为真。
+    // 如果结果为否，则在控制台输出一条相应信息，并且抛出一个异常。
+    var as = 1;
+    console.assert(as);
+    var bs = 2;
+    console.assert(bs==0);
+</script>
+</body>
+
+</html>
