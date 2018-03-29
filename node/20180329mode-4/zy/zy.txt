@@ -1,0 +1,13 @@
+{"text":[{"nameX":"张",
+           "name":"三",
+           "password":"123456"
+           },
+         {"nameX":"时",
+         "name":"三三",
+         "password":"123456"
+         },
+         {"nameX":"时",
+                  "name":"三三",
+                  "password":"123456"
+                  }
+         ]}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nosd服务</title>
+</head>
+<link rel="stylesheet" type="text/css" href="zy.css"/>
+<body>
+<form action="/fromApi2" method="post" >
+    <label for ="a">用户名</label>
+    <input type="text" id="a" name="userName">
+    <br>
+    <label for ="b">密码</label>
+    <input type="password" id="b" name="password">
+    <br>
+    上传<input type="file" name="fileId">
+    <br>
+    <input type="submit" id="g" value="提交">
+
+</form>
+<div id="time"></div>
+<img src="img/1-270x270-19-YATB7835.jpg">
+</body>
+<script>
+    var url = "/ajaxApi";
+    var oTime = document.getElementById("time");
+    var timer = setInterval(function () {
+        ajax_get(url,function (res) {
+            time.innerHTML = res;
+        })
+    },1000);
+
+    function ajax_get(url, callback) {
+        var xhr = null;
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+        } else {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                callback(xhr.responseText);
+            }
+        }
+        xhr.open("get", url, true);
+        xhr.send();
+
+        return;
+    }
+</script>
+</html>

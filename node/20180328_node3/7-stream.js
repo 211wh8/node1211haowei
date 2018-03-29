@@ -17,8 +17,10 @@ rs.on("data",(chunk)=>{
             console.log("拷贝成功");
         }
     })
-// rs.pipe(ws);
+
 });
+
+// rs.pipe(ws);//复制
 rs.on("end",() =>{
     console.log("ends");
 
