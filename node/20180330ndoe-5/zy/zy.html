@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="Font-Awesome-3.2.1/css/font-awesome.css"/>
+    <style type="text/css">
+
+        #wrap {
+
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        #users {
+            width: 100%;
+        }
+
+        #users div {
+            border-top: 1px solid black;
+        }
+
+        #wrap .haner {
+
+            font-size: 40px;
+            font-weight: bold;
+            padding-top: 15px;
+        }
+
+        .row {
+            width: 100%;
+            margin: 0 auto;
+            border-top: none;
+            /*padding-top:5px;*/
+        }
+
+        .rowTr div {
+            padding-top: 10px;
+        }
+
+        /*.rowTr{*/
+
+        /*border-top: 0px;*/
+        /*padding-top: 20px;*/
+        /*}*/
+        #users .rowTr {
+            border-top: 0px;
+            /*padding-top: 20px;*/
+            /*border-top: 1px solid black;*/
+        }
+
+        #users .xing {
+            margin: 10px 0;
+            border-top: none;
+        }
+
+        #get {
+            width: 100px;
+            height: 30px;
+            background-color: #00CC00;
+            color: white;
+        }
+
+        #new .newA {
+
+            width: 100%;
+            /*height: 30px;*/
+            overflow: hidden;
+            margin: 10px;
+        }
+        #new{
+
+        }
+        #new .newA .a {
+            float: left;
+            text-align: right;
+            width: 100px;
+            height: 20px;
+            margin-right: 15px;
+        }
+
+        #new input {
+            float: left;
+            width: 500px;
+            height: 30px;
+        }
+        #go {
+            width: 100px;
+            height: 30px;
+            background-color: #00CC00;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+<div id="wrap">
+    <div id="users">
+        <div class="haner">User</div>
+        <div class="row rowTr">
+            <div class="col-xs-6 ">编辑</div>
+            <div class="col-xs-3 ">姓</div>
+            <div class="col-xs-3 ">名</div>
+        </div>
+
+    </div>
+    <div class="bottom">
+        <button id="get"><span class=" icon-user-md">创建新用户</span></button>
+    </div>
+    <div id="new">
+        <div class="haner">注册新用户</div>
+        <form action="/fromApi2" method="get" enctype="multipart/form-data">
+            <div class="newA">
+                <div class="a">姓</div>
+                <input type="text" class="text" name="nameX"></div>
+            <div class="newA">
+                <div class="a">名</div>
+                <input type="text" class="text" name="name"></div>
+            <div class="newA">
+                <div class="a">密码</div>
+                <input type="text" class="text" name="password1"></div>
+            <div class="newA">
+                <div class="a">重复密码</div>
+                <input type="text" class="text" name="password2"></div>
+            <!--<button ><span class="icon-save">保存</span></button>-->
+            <input id="go" class="icon-save" type="submit" id="g" value="保存">
+
+        </form>
+
+
+    </div>
+</div>
+
+
+</body>
+<script>
+    var oUsers = document.getElementById("users");
+    var url = "/ajaxApi";
+    var oJson = null;
+    ajax_get(url, function (res) {
+        oJson = strToJson(res);
+        // console.log(oJson["text"][0])
+        for (var i = 0; i < oJson.length; i++) {
+            var oRow = document.createElement("div");
+            oRow.className = "row";
+            oUsers.appendChild(oRow);
+            var ocol1 = document.createElement("div");
+            ocol1.className = "col-xs-6 xing";
+            oRow.appendChild(ocol1);
+            var oBtn = document.createElement("button");
+            ocol1.appendChild(oBtn);
+            var oSpan = document.createElement("span");
+            oSpan.className = "glyphicon icon-pencil";
+            oSpan.innerHTML = "编辑";
+            oBtn.appendChild(oSpan);
+            for (var j = 0; j < 2; j++) {
+                var ocol1 = document.createElement("div");
+                ocol1.className = "col-xs-3 xing";
+                if (j < 1) {
+                    ocol1.innerHTML = oJson[i]['nameX'];
+                } else {
+                    ocol1.innerHTML = oJson[i]['name'];
+                }
+
+                oRow.appendChild(ocol1);
+            }
+        }
+    });
+
+    function strToJson(str) {
+        var json = eval('(' + str + ')');
+        return json;
+    }
+
+    function ajax_get(url, callback) {
+        var xhr = null;
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+        } else {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                callback(xhr.responseText);
+            }
+        }
+        xhr.open("get", url, true);
+        xhr.send();
+
+        return;
+    }
+
+
+</script>
+</html>

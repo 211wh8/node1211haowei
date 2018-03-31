@@ -1,0 +1,19 @@
+ls 显示 -l显示目录详细信息
+ cd进入目录
+.. 上一层目录
+/ 根目录
+sudo 管理员权限运行
+
+nvm install 安装对应部分的noode
+nvm ls 查询当前安装的版本列表
+nvm alias default 设置默认版本
+nvm  uer 临时使用的版本 仅对当期终端有用
+nvm ls-remote查询可用版本
+nvm install 下载
+chmod 权限操作
+
+
+/*————————————————————————————————————————————*/
+git 版本控制工具 主要用于控制代码项目
+     配置管理
+     svn cc

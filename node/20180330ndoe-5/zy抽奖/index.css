@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#wrap{
+    background: url("img/2B.png") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#hand{
+    position: absolute;
+    right: 0;
+}
+#lun{
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    margin-left: -145px;
+    background: url("img/lun.png") no-repeat;
+    background-size: 100%;
+    width: 290px;
+    height: 290px;
+    transform: rotate(0);
+    z-index: 1;
+}
+#btn0{
+    position: absolute;
+    top: 240px;
+    left: 110px;
+
+    width: 100px;
+    height: 100px;
+    background: url("img/shadow.png") no-repeat;
+    background-size: 100% 100%;
+    z-index: 2;
+}
+#btn{
+    position: absolute;
+    top: 218px;
+    left: 105px;
+    width: 110px;
+    height: 130px;
+    background: url("img/btn.png") no-repeat;
+    background-size: 100% 100%;
+    z-index: 3;
+}

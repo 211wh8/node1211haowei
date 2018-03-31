@@ -1,0 +1,34 @@
+显示数据库
+show dbs
+
+ 当前数据库
+db
+切换数据库 没有创建
+user 数据库名
+显示表
+show collections
+格式化显示表内容
+db.person.find().pretty()
+查找name为zhangsan的
+db.person.find({"name":"zhangsan"}).pretty()
+俩种条件
+db.person.find({"name":"zhangsan":"age":18}).pretty()
+张三或李四
+db.person.find({"$or":[{"name":"zhangsan"},{"name":"lisi"}]}).pretty()
+大于20岁
+db.person.find({"age":{"$gt":20}}).pretty()
+大于等于
+db.person.find({"age":{"$gte":20}}).pretty()
+小于
+db.person.find({"age":{"$lt":20}}).pretty()
+小于等于
+db.person.find({"age":{"$lte":20}}).pretty()
+不等于
+db.person.find({"age":{"$ne":20}}).pretty()
+全改
+db.person.update({"name":"zhangsan"},{$set:{age:18}},{multi:true})
+只删一个
+db.person.remove({"name":"zhangsan"})
+删
+db.person.remove({"name":"zhangsan"}),{"justOne":true}
+exid退出
